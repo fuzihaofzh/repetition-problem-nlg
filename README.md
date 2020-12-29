@@ -2,6 +2,9 @@
 This repository share the code for the paper "A Theoretical Analysis of the Repetition Problem in Text Generation" in AAAI 2021. The repetition problem has been observed in nearly all text generation models. We theoretically prove that this problem is, unfortunately, caused by the traits of our language itself. There exists too many words predicting the same word as the subsequent word with high probability. Consequently, it is easy to go back to that word and form repetitions. 
 We dub this problem as the **high inflow problem**. Based on the theoretical analysis, we propose a novel **rebalanced encoding** approach to alleviate the high inflow problem.
 
+![image](https://user-images.githubusercontent.com/1419566/103292227-5fb86780-4a28-11eb-97c5-44ace9e0f6cb.png)
+
+
 ## Requirements
 - GCC >= 4.8
 - Python >= 3.7
