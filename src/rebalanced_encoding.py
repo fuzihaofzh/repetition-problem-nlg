@@ -15,7 +15,7 @@ import scipy.sparse as sparse
 from multiprocessing import Pool
 
 
-CORE_NUM = os.cpu_count() - 1
+CORE_NUM = max(os.cpu_count() - 1, 1)
 
 def _make_stats(sents, id2w, w2id):
     #try:
