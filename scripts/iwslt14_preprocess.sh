@@ -17,7 +17,7 @@ do
     tools/fastBPE/fast applybpe output/preprocessed/$EXP/test.$PART output/preprocessed/$DATASET/test.$PART output/preprocessed/$EXP/"$PART"_codes
     tools/fastBPE/fast applybpe output/preprocessed/$EXP/valid.$PART output/preprocessed/$DATASET/valid.$PART output/preprocessed/$EXP/"$PART"_codes
 done
-
+cp output/preprocessed/$DATASET/test.en output/preprocessed/$EXP/test.en.ref
 
 #=========STEP 2. Rebalanced Encoding
 DATASET1=$EXP
