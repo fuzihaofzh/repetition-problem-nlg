@@ -123,7 +123,7 @@ def rebalance_fastbpe(input_dir = "wiki103_fastbpe_10000", output_dir = "wiki103
         data = data.encode('ascii',errors='ignore').decode()
         if connect_high_freq is not None:
             words = data.split(' ')
-            bsz = len(words) // (CORE_NUM - 1)
+            bsz = len(words) // max(CORE_NUM - 1, 1)
             blocks = [' '.join(words[i * bsz : (i+1) * bsz]) for i in range(math.ceil(len(words) / bsz))]
             #results = Parallel(n_jobs=-1)(delayed(multiple_replace)(blk, hfs) for blk in blocks)
             with Pool(CORE_NUM) as pool:
