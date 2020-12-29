@@ -7,18 +7,14 @@
 #SBATCH --partition=infofil01
 
 GPU=3
-#CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topk40
-
-#CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topk10
-#CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topp0.9
-#CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topp0.95
-#CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 temp
-
-#CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 base 
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topk40
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topk10
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topp0.9
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 topp0.95
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 temp
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 base 
 CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000 sampling 
-"""CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000_re0.1 base
+CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000_re0.1 base
 CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000_re0.15 base
 CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000_re0.05 base
 CUDA_VISIBLE_DEVICES=$GPU ./scripts/iwslt14_test_single.sh iwslt14deen_fastbpe_10000_re0.02 base
-
-"""
