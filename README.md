@@ -29,6 +29,32 @@ cd repetition-problem-nlg
 ```
 Results can be found in `output/eval/*`
 
+
+## wiki103
+### Download the preprocessed data
+```bash
+git clone https://github.com/fuzihaofzh/preprocessed_wiki103.git output/preprocessed/wiki103
+```
+This may take few minutes to complete.
+
+### Preprocess Data
+```bash
+./scripts/wiki103_preprocess.sh
+```
+### Train
+```bash
+./scripts/wiki103_train.sh wiki103_fastbpe_10000
+./scripts/wiki103_train.sh wiki103_fastbpe_10000_re0.1
+```
+
+### Test
+```bash
+./scripts/wiki103_test.sh
+```
+Results can be found in `output/eval/*`
+
+
+
 ## Cite 
 ```latex
 @inproceedings{fu2020a,
