@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+import sys
+import argparse
+import os
+import re
+import numpy as np
+from pipetools import *
+from functools import *
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Python Pipeline Processor. \n The input variable is called "arg", deal it with python!')
+    parser.add_argument('code', type=str, help='code')
+    parser.add_argument('arg', type=str, nargs='?', help='arg', default = '')
+    parser.add_argument('-d', '--dbg', action='store_true', help='show command')
+    parser.add_argument('-l', '--line', action='store_true', help='process line by line')
+    parser.add_argument('-p', '--pipeline', action='store_true', help='use pipeline mode')
+    args = parser.parse_args()
+    code = args.code
+    # get arg
+    if not args.line:
+        arg = ''
+        for line in sys.stdin:
+            arg += line
+        arguments = [args.arg if args.arg else arg]
+    else:
+        arguments = []
+        if args.arg:
+            lines = args.arg.split('\\n')
+            for arg in lines:
+                arguments.append(arg)
+        else:
+            line = sys.stdin.readline()
+            while line:
+                arg = line
+                arguments.append(arg)
+                line = sys.stdin.readline()
+    # debug
+    if args.dbg:
+        print("args:", arguments)
+        print("code:", code)
+    # run
+    pipe_prefix = "arg > pipe | (lambda x: x) | " if args.pipeline else ""
+    for arg in arguments:
+        try:
+            exec(pipe_prefix + code)
+        except BrokenPipeError:
+            pass
