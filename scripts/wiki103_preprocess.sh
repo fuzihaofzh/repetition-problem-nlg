@@ -1,7 +1,7 @@
 DATASET=wiki103
 VSIZE=10000
 TOOL=fastbpe
-RATIO=0.08
+RATIO=0.1
 
 #=========STEP 1. Fastbpe
 
