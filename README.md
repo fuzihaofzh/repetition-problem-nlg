@@ -15,7 +15,7 @@ cd repetition-problem-nlg
 ## iwslt14
 ### Preprocess Data
 ```bash
-iwslt14_preprocess.sh
+./scripts/iwslt14_preprocess.sh
 ```
 ### Train
 ```bash
@@ -24,4 +24,16 @@ iwslt14_preprocess.sh
 ```
 
 ### Test
+```bash
+./scripts/iwslt14_test.sh
+```
 
+## Cite 
+```latex
+@inproceedings{fu2020a,
+  title={A Theoretical Analysis of the Repetition Problem in Text Generation.},
+  author={Fu, Zihao and Wai Lam and Anthony Man-Cho So and Bei Shi},
+  booktitle={Thirty-Fifth AAAI Conference on Artificial Intelligence},
+  year={2021}
+}
+```
