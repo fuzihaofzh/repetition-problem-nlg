@@ -56,7 +56,7 @@ def get_high_inflow(data, maxp = 0.5, N = 10, col_num = 5):
     hfs = {}
     data0 = data
     words = words0 = data.split()
-    bsz = len(words) // (CORE_NUM - 1)
+    bsz = max(len(words) // (CORE_NUM - 1), 1)
     blocks = blocks0 = [' '.join(words[i * bsz : (i+1) * bsz]) for i in range(math.ceil(len(words) / bsz))]
     for nn in range(N):
         print("Block num:", len(blocks))
