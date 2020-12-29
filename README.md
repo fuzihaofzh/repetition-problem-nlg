@@ -27,6 +27,7 @@ cd repetition-problem-nlg
 ```bash
 ./scripts/iwslt14_test.sh
 ```
+Results can be found in `output/eval/*`
 
 ## Cite 
 ```latex
