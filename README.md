@@ -32,7 +32,7 @@ cd repetition-problem-nlg
 ```latex
 @inproceedings{fu2020a,
   title={A Theoretical Analysis of the Repetition Problem in Text Generation.},
-  author={Fu, Zihao and Wai Lam and Anthony Man-Cho So and Bei Shi},
+  author={Fu, Zihao and Lam, Wai and So, Anthony Man-Cho and Shi, Bei },
   booktitle={Thirty-Fifth AAAI Conference on Artificial Intelligence},
   year={2021}
 }
