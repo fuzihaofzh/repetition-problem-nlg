@@ -47,7 +47,7 @@ export PYTHONPATH=PYTHONPATH:tools/fairseq
 #fairseq-generate
 EPOCH=80
 #fairseq-eval-lm output/data-bin/$DATASET --task language_modeling --path output/models/$EXP/checkpoint$EPOCH.pt 
-python $DBG tools/fairseq/fairseq_cli/interactive.py output/data-bin/$DATASET --task language_modeling --path output/models/$EXP/checkpoint$EPOCH.pt --beam 1 --input ../output/dev/test_1word --batch-size 500 --buffer-size 500 $EPAR > output/eval/$EXP/output.$EPOCH.$MODE.txt
+python $DBG tools/fairseq/fairseq_cli/interactive.py output/data-bin/$DATASET --task language_modeling --path output/models/$EXP/checkpoint$EPOCH.pt --beam 1 --input output/preprocessed/wiki103/test_1word --batch-size 500 --buffer-size 500 $EPAR > output/eval/$EXP/output.$EPOCH.$MODE.txt
 
 #output/preprocessed/$DATASET/test_1word
 
